@@ -7,7 +7,6 @@ export default function App() {
       <View>
         <TextInput placeholder='your course goal'/>
         <Button title='Add Goal'/>
-        test commit
       </View>
       <view>
         <Text>List of goals...</Text>
