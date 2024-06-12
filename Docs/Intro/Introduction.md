@@ -10,7 +10,10 @@ Here are some links to read about how it works:
 
 #### Creating a New Project
 
-We would need to ensure we have the correct setup locally for building these apps. As per React Documentaion I will be using Expo (another react framework), which will allows us to test and run our apps. We can follow this guide on how to setup your environment: <a href="https://reactnative.dev/docs/environment-setup">React Native Docs: Environment Setup</a>
+We would need to ensure we have the correct setup locally for building these apps. As per React Documentaion I will be using Expo (another react framework), which will allows us to test and run our apps. We can follow this guide on how to setup your environment:
+<ul>
+    <li><a href="https://reactnative.dev/docs/environment-setup">React Native Docs: Environment Setup</a></li>
+</ul> 
 
 Once we have all this ready you should be able to create a project with this command:
 ```npx create-expo-app --template blank appName```.
