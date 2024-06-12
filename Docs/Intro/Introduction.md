@@ -19,3 +19,8 @@ Once we have all this ready you should be able to create a project with this com
 ```npx create-expo-app --template blank appName```.
 
 Next you should be able to run ```npx expo start``` which will start the expo server; thus allows us to run our app. 
+
+### Troubleshooting
+<ol>
+    <li>Error message about expo being depreciated: use <b>npm install expo</b> for every project we use.  </li>
+</ol>
