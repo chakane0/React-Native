@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, TextInput, View , Button, Text, ScrollView} from 'react-native';
 import { useState } from 'react';
- 
+import GoalItem from './components/GoalItem';
+import GoalInput from './components/GoalInput'
 export default function App() {
 
   const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -16,7 +17,7 @@ export default function App() {
   // executes when the button is clicked
   // we will use State to take care of this
   function addGoalHandler() {
-
+    
     // this is a p good way to update state
     setCourseGoals(currentCourseGoals => [
       ...currentCourseGoals, 
@@ -24,34 +25,26 @@ export default function App() {
     ]);
   };
 
-
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
-
-        <TextInput 
-          style={styles.textInput} 
-          placeholder='your course goal' 
-          onChangeText={goalInputHandler}
-        />
-
-        <Button title='Add Goal' onPress={addGoalHandler}/>
+        <GoalInput goalInputHandler={goalInputHandler} addGoalHandler={addGoalHandler}/>
       </View>
       <View style={styles.goalsContainer}>
       <ScrollView style={styles.goalsContainer}>
-        {courseGoals.map((goal, index) => 
-          <View key={index} style={styles.listItem}>
-            <Text style={styles.goalsNumber}>{index+1}.</Text>
-            <Text key={index}>{goal}</Text>
-          </View>
-          
+        {courseGoals.map((goal, index) =>
+
+          // here we are using props to pass the information to our other js file (GoalItem.js)
+          <GoalItem index={index} goal={goal}/>
+
         )}
       </ScrollView>
       </View>
     </View>
   );
 }
- 
+  
+  
 const styles = StyleSheet.create({
   appContainer: {
     paddingTop: 50,
@@ -63,25 +56,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingBottom: 24,
+    paddingBottom: 25,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc'
-  },
-  textInput: {
-    borderWidth: 1, 
-    borderColor: '#cccccc',
-    width: '70%',
-    marginRight: 8,
-    padding: 8,                           
   },
   goalsContainer: {
     flex: 10,
   }, 
-  goalsNumber: {
-    marginRight: 10
-  }, 
-  listItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  }
+  
 })
