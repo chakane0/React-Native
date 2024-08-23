@@ -1,0 +1,107 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-debug.log*
+
+# React Native
+# React Native Android build files
+/android
+*.gradle
+*.keystore
+!gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Android Studio project files
+/.idea
+*.iml
+*.hprof
+
+# React Native iOS build files
+/ios
+/Pods/
+/*.pbxuser
+/*.xcworkspace
+!default.xcworkspace
+!Podfile
+!Podfile.lock
+!Pods/
+/*.xcodeproj/xcuserdata/
+*.xcuserdatad/
+/ios/build/
+/ios/DerivedData/
+/ios/*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+*.xcuserstate
+*.moved-aside
+DerivedData/
+.idea/
+/*.hmap
+/*.ipa
+/*.dSYM.zip
+*.dSYM
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Expo
+.expo/
+.expo-shared/
+
+# Others
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log
+*.tlog
+*.patch
+*.diff
+*.sublime-workspace
+*.sublime-project
+*.tags
+*.un~
+*.ttf
+*.otf
+*.DS_Store
+Thumbs.db
