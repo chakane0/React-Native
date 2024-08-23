@@ -8,7 +8,6 @@ export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState('');
   const [courseGoals, setCourseGoals] = useState([]);
 
-
   // responsible for fetching user input
   function goalInputHandler(enteredText) {
     setEnteredGoalText(enteredText);
@@ -17,25 +16,24 @@ export default function App() {
   // executes when the button is clicked
   // we will use State to take care of this
   function addGoalHandler() {
-    
     // this is a p good way to update state
-    setCourseGoals(currentCourseGoals => [
-      ...currentCourseGoals, 
-      enteredGoalText,
-    ]);
+    setCourseGoals(currentCourseGoals => [ ...currentCourseGoals, enteredGoalText]);
   };
 
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
+
+        // props are being used to pass data to another js file (GoalInput.js)
         <GoalInput goalInputHandler={goalInputHandler} addGoalHandler={addGoalHandler}/>
+
       </View>
       <View style={styles.goalsContainer}>
       <ScrollView style={styles.goalsContainer}>
         {courseGoals.map((goal, index) =>
 
           // here we are using props to pass the information to our other js file (GoalItem.js)
-          <GoalItem index={index} goal={goal}/>
+          <GoalItem key={index} index={index} goal={goal} courseGoals={courseGoals} setCourseGoals={setCourseGoals}/>
 
         )}
       </ScrollView>
